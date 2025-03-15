@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 22:49:59 by dande-je          #+#    #+#             */
-/*   Updated: 2025/03/15 01:42:17 by dande-je         ###   ########.fr       */
+/*   Updated: 2025/03/15 03:38:29 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,14 @@ class ClapTrap {
   ClapTrap& operator=(const ClapTrap& other);
 
   void attack(const std::string& target);
-  void takeDamage(unsigned int amount);
   void beRepaired(unsigned int amount);
+  void takeDamage(unsigned int amount);
 
  private:
   enum ClapTarpEnum {
-    CLAPTRAP_HIT_POINTS = 10,
+    CLAPTRAP_ATTACK_DAMAGE,
     CLAPTRAP_ENERGY_POINTS = 10,
-    CLAPTRAP_ATTACK_DAMAGE = 0,
+    CLAPTRAP_HIT_POINTS = 10,
     DEATH = 0
   };
 
