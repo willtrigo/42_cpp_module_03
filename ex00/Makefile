@@ -6,7 +6,7 @@
 #    By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/14 22:43:06 by dande-je          #+#    #+#              #
-#    Updated: 2025/03/14 23:36:22 by dande-je         ###   ########.fr        #
+#    Updated: 2025/03/15 01:35:40 by dande-je         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,6 +28,7 @@ RESET                           := \033[0m
 SRCS_DIR                        := src/
 SRCS_MAIN_DIR                   := $(SRCS_DIR)main/
 SRCS_CORE_DIR                   := $(SRCS_DIR)core/
+SRCS_UTILS_DIR                  := $(SRCS_DIR)utils/
 INCS                            := src/
 BIN_DIR                         := bin/
 BUILD_DIR                       := build/
@@ -51,6 +52,7 @@ NAME                            = $(BIN_DIR)$(NAME_OUTPUT)
 SRCS_FILES                      += $(addprefix $(SRCS_MAIN_DIR), main.cpp)
 SRCS_FILES                      += $(addprefix $(SRCS_CORE_DIR), ClapTrapConstructor.cpp \
 								   ClapTrapUtility.cpp)
+SRCS_FILES                      += $(addprefix $(SRCS_UTILS_DIR), TerminalColor.cpp)
 
 OBJS                            += $(SRCS_FILES:%.cpp=$(BUILD_DIR)%.o)
 
