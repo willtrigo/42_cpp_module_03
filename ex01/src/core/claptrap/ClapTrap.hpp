@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/15 02:46:59 by dande-je          #+#    #+#             */
-/*   Updated: 2025/03/15 02:47:40 by dande-je         ###   ########.fr       */
+/*   Updated: 2025/03/15 03:39:12 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,17 +26,10 @@ class ClapTrap {
   ClapTrap& operator=(const ClapTrap& other);
 
   void attack(const std::string& target);
-  void takeDamage(unsigned int amount);
   void beRepaired(unsigned int amount);
+  void takeDamage(unsigned int amount);
 
- private:
-  enum ClapTarpEnum {
-    CLAPTRAP_HIT_POINTS = 10,
-    CLAPTRAP_ENERGY_POINTS = 10,
-    CLAPTRAP_ATTACK_DAMAGE = 0,
-    DEATH = 0
-  };
-
+ protected:
   std::string m_name;
   unsigned int m_attackDamage;
   unsigned int m_energyPoints;
@@ -46,6 +39,14 @@ class ClapTrap {
   ColorCode m_strColor;
 
   void log(const std::string& str) const;
+
+ private:
+  enum ClapTarpEnum {
+    CLAPTRAP_ATTACK_DAMAGE,
+    CLAPTRAP_ENERGY_POINTS = 10,
+    CLAPTRAP_HIT_POINTS = 10,
+    DEATH = 0
+  };
 };
 
 #endif // CLAPTRAP_HPP

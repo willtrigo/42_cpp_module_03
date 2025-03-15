@@ -6,7 +6,7 @@
 #    By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/15 02:44:09 by dande-je          #+#    #+#              #
-#    Updated: 2025/03/15 02:59:55 by dande-je         ###   ########.fr        #
+#    Updated: 2025/03/15 04:15:03 by dande-je         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,7 @@ SRCS_DIR                        := src/
 SRCS_MAIN_DIR                   := $(SRCS_DIR)main/
 SRCS_CORE_DIR                   := $(SRCS_DIR)core/
 SRCS_CLAPTRAP_DIR               := $(SRCS_CORE_DIR)claptrap/
+SRCS_SCAVTRAP_DIR               := $(SRCS_CORE_DIR)scavtrap/
 SRCS_UTILS_DIR                  := $(SRCS_DIR)utils/
 INCS                            := src/
 BIN_DIR                         := bin/
@@ -47,12 +48,14 @@ SLEEP                           := sleep 0.01
 #                                   FILES                                      #
 #******************************************************************************#
 
-NAME_OUTPUT                     = claptrap
+NAME_OUTPUT                     = scavtrap
 NAME                            = $(BIN_DIR)$(NAME_OUTPUT)
 
 SRCS_FILES                      += $(addprefix $(SRCS_MAIN_DIR), main.cpp)
 SRCS_FILES                      += $(addprefix $(SRCS_CLAPTRAP_DIR), ClapTrapConstructor.cpp \
 								   ClapTrapUtility.cpp)
+SRCS_FILES                      += $(addprefix $(SRCS_SCAVTRAP_DIR), ScavTrapConstructor.cpp \
+								   ScavTrapUtility.cpp)
 SRCS_FILES                      += $(addprefix $(SRCS_UTILS_DIR), TerminalColor.cpp)
 
 OBJS                            += $(SRCS_FILES:%.cpp=$(BUILD_DIR)%.o)

@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/15 02:47:32 by dande-je          #+#    #+#             */
-/*   Updated: 2025/03/15 02:57:28 by dande-je         ###   ########.fr       */
+/*   Updated: 2025/03/15 04:12:35 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ ClapTrap::ClapTrap()
     m_color(TerminalColor::getInstance()),
     m_bgColor(BG_WHITE),
     m_strColor(BLACK) {
-  log("Default constructor called");
+  log("Default claptrap constructor called");
 }
 
 ClapTrap::ClapTrap(const std::string name)
@@ -32,7 +32,7 @@ ClapTrap::ClapTrap(const std::string name)
     m_color(TerminalColor::getInstance()),
     m_bgColor(BG_WHITE),
     m_strColor(BLACK) {
-  log("Default parameterized constructor called");
+  log("Default claptrap parameterized constructor called");
 }
 
 ClapTrap::ClapTrap(ClapTrap const& other)
@@ -43,20 +43,20 @@ ClapTrap::ClapTrap(ClapTrap const& other)
     m_color(TerminalColor::getInstance()),
     m_bgColor(BG_WHITE),
     m_strColor(BLACK) {
-  log("Copy constructor called");
+  log("Copy claptrap constructor called");
 }
 
 ClapTrap::~ClapTrap() {
   this->m_bgColor = BG_WHITE;
   this->m_strColor = BLACK;
-  log("Destructor called");
+  log("Destructor claptrap called");
 }
 
 ClapTrap& ClapTrap::operator=(const ClapTrap& other) {
   if (this != &other) {
     this->m_bgColor = BG_WHITE;
     this->m_strColor = BLACK;
-    log("Copy assignment operator called");
+    log("Copy assignment claptrap operator called");
     this->m_name = other.m_name;
     this->m_attackDamage = other.m_attackDamage;
     this->m_energyPoints = other.m_energyPoints;
