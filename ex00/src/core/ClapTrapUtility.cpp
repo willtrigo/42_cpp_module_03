@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 23:32:56 by dande-je          #+#    #+#             */
-/*   Updated: 2025/03/15 02:30:10 by dande-je         ###   ########.fr       */
+/*   Updated: 2025/03/15 16:14:17 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void ClapTrap::takeDamage(unsigned int amount) {
 
   if (!this->m_hitPoints) {
     this->m_strColor = RED;
-    log("takeDamage : ClapTrap " + this->m_name + " is dead!");
+    log("takeDamage: ClapTrap " + this->m_name + " is dead!");
   }
 }
 
