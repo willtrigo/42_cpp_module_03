@@ -6,11 +6,11 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/15 02:44:36 by dande-je          #+#    #+#             */
-/*   Updated: 2025/03/15 02:45:57 by dande-je         ###   ########.fr       */
+/*   Updated: 2025/03/15 02:57:42 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "core/ClapTrap.hpp"
+#include "core/claptrap/ClapTrap.hpp"
 #include <cstdlib>
 
 int main() {

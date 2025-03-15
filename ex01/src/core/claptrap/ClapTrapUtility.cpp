@@ -6,11 +6,11 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/15 02:47:29 by dande-je          #+#    #+#             */
-/*   Updated: 2025/03/15 02:48:02 by dande-je         ###   ########.fr       */
+/*   Updated: 2025/03/15 02:57:34 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "core/ClapTrap.hpp"
+#include "core/claptrap/ClapTrap.hpp"
 #include "utils/TerminalColor.hpp"
 #include <iostream>
 #include <sstream>
