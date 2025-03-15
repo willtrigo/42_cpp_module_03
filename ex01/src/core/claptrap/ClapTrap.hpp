@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/15 02:46:59 by dande-je          #+#    #+#             */
-/*   Updated: 2025/03/15 03:39:12 by dande-je         ###   ########.fr       */
+/*   Updated: 2025/03/15 15:44:38 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ class ClapTrap {
 
  protected:
   std::string m_name;
+  std::string m_nameClass;
   unsigned int m_attackDamage;
   unsigned int m_energyPoints;
   unsigned int m_hitPoints;

@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/15 03:05:20 by dande-je          #+#    #+#             */
-/*   Updated: 2025/03/15 04:24:32 by dande-je         ###   ########.fr       */
+/*   Updated: 2025/03/15 15:55:36 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include "utils/TerminalColor.hpp"
 
 ScavTrap::ScavTrap() : ClapTrap() {
+  this->m_nameClass = "ScavTrap";
   this->m_attackDamage = SCAVTRAP_ATTACK_DAMAGE;
   this->m_energyPoints = SCAVTRAP_ENERGY_POINTS;
   this->m_hitPoints = SCAVTRAP_HIT_POINTS;
@@ -24,6 +25,7 @@ ScavTrap::ScavTrap() : ClapTrap() {
 }
 
 ScavTrap::ScavTrap(const std::string name) : ClapTrap(name) {
+  this->m_nameClass = "ScavTrap";
   this->m_attackDamage = SCAVTRAP_ATTACK_DAMAGE;
   this->m_energyPoints = SCAVTRAP_ENERGY_POINTS;
   this->m_hitPoints = SCAVTRAP_HIT_POINTS;
@@ -33,6 +35,7 @@ ScavTrap::ScavTrap(const std::string name) : ClapTrap(name) {
 }
 
 ScavTrap::ScavTrap(ScavTrap const& other) : ClapTrap(other) {
+  this->m_nameClass = "ScavTrap";
   this->m_attackDamage = SCAVTRAP_ATTACK_DAMAGE;
   this->m_energyPoints = SCAVTRAP_ENERGY_POINTS;
   this->m_hitPoints = SCAVTRAP_HIT_POINTS;
@@ -42,6 +45,7 @@ ScavTrap::ScavTrap(ScavTrap const& other) : ClapTrap(other) {
 }
 
 ScavTrap::~ScavTrap() {
+  this->m_nameClass = "ScavTrap";
   this->m_bgColor = BG_PURPLE;
   this->m_strColor = WHITE;
   log("Destructor scavtrap called");
@@ -51,8 +55,9 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& other) {
   if (this != &other) {
     this->m_bgColor = BG_PURPLE;
     this->m_strColor = WHITE;
-    log("Copy assignment scavtrap operator called");
+    log("Copy assignment " + other.m_nameClass + " operator called");
     this->m_name = other.m_name;
+    this->m_nameClass = other.m_nameClass;
     this->m_attackDamage = other.m_attackDamage;
     this->m_energyPoints = other.m_energyPoints;
     this->m_hitPoints = other.m_hitPoints;
