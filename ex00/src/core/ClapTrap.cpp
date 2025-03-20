@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrapConstructor.cpp                            :+:      :+:    :+:   */
+/*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 22:49:51 by dande-je          #+#    #+#             */
-/*   Updated: 2025/03/15 03:47:56 by dande-je         ###   ########.fr       */
+/*   Updated: 2025/03/20 11:02:53 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ ClapTrap::ClapTrap()
   log("Default claptrap constructor called");
 }
 
-ClapTrap::ClapTrap(const std::string name)
+ClapTrap::ClapTrap(const std::string& name)
   : m_name(name),
     m_attackDamage(CLAPTRAP_ATTACK_DAMAGE),
     m_energyPoints(CLAPTRAP_ENERGY_POINTS),
