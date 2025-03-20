@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 14:43:28 by dande-je          #+#    #+#             */
-/*   Updated: 2025/03/20 14:45:37 by dande-je         ###   ########.fr       */
+/*   Updated: 2025/03/20 15:45:56 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,8 @@
 #include "core/claptrap/ClapTrap.hpp"
 #include <string>
 
-class ScavTrap : public ClapTrap {
+class ScavTrap : virtual public ClapTrap {
  public:
-  ScavTrap();
   ScavTrap(const std::string& name);
   ScavTrap(ScavTrap const& other);
   virtual ~ScavTrap();
@@ -28,12 +27,14 @@ class ScavTrap : public ClapTrap {
   void attack(const std::string& target);
   void guardGate();
 
- private:
+ protected:
   enum ScavTrapEnum {
     SCAVTRAP_HIT_POINTS = 100,
     SCAVTRAP_ENERGY_POINTS = 50,
     SCAVTRAP_ATTACK_DAMAGE = 20
   };
+
+  ScavTrap();
 };
 
 #endif // SCAVTRAP_HPP

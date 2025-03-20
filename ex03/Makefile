@@ -6,7 +6,7 @@
 #    By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/20 14:22:01 by dande-je          #+#    #+#              #
-#    Updated: 2025/03/20 14:46:19 by dande-je         ###   ########.fr        #
+#    Updated: 2025/03/20 16:40:33 by dande-je         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,7 @@ SRCS_DIR                        := src/
 SRCS_MAIN_DIR                   := $(SRCS_DIR)main/
 SRCS_CORE_DIR                   := $(SRCS_DIR)core/
 SRCS_CLAPTRAP_DIR               := $(SRCS_CORE_DIR)claptrap/
+SRCS_DIAMONDTRAP_DIR            := $(SRCS_CORE_DIR)diamondtrap/
 SRCS_FRAGTRAP_DIR               := $(SRCS_CORE_DIR)fragtrap/
 SRCS_SCAVTRAP_DIR               := $(SRCS_CORE_DIR)scavtrap/
 SRCS_UTILS_DIR                  := $(SRCS_DIR)utils/
@@ -55,6 +56,8 @@ NAME                            = $(BIN_DIR)$(NAME_OUTPUT)
 SRCS_FILES                      += $(addprefix $(SRCS_MAIN_DIR), main.cpp)
 SRCS_FILES                      += $(addprefix $(SRCS_CLAPTRAP_DIR), ClapTrap.cpp \
 								   ClapTrapUtility.cpp)
+SRCS_FILES                      += $(addprefix $(SRCS_DIAMONDTRAP_DIR), DiamondTrap.cpp \
+								   DiamondTrapUtility.cpp)
 SRCS_FILES                      += $(addprefix $(SRCS_FRAGTRAP_DIR), FragTrap.cpp \
 								   FragTrapUtility.cpp)
 SRCS_FILES                      += $(addprefix $(SRCS_SCAVTRAP_DIR), ScavTrap.cpp \

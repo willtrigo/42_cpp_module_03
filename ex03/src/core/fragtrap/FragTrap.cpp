@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 14:42:18 by dande-je          #+#    #+#             */
-/*   Updated: 2025/03/20 14:43:06 by dande-je         ###   ########.fr       */
+/*   Updated: 2025/03/20 16:59:09 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ FragTrap::~FragTrap() {
   this->m_nameClass = "FragTrap";
   this->m_bgColor = BG_CYAN;
   this->m_strColor = BLACK;
-  log("Destructor scavtrap called");
+  log("Destructor fragtrap called");
 }
 
 FragTrap& FragTrap::operator=(const FragTrap& other) {
