@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 22:49:59 by dande-je          #+#    #+#             */
-/*   Updated: 2025/03/20 08:54:17 by dande-je         ###   ########.fr       */
+/*   Updated: 2025/03/20 10:57:42 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ class ClapTrap {
   void takeDamage(unsigned int amount);
 
  private:
-  enum ClapTarpEnum {
+  enum ClapTrapEnum {
     CLAPTRAP_ATTACK_DAMAGE,
     CLAPTRAP_ENERGY_POINTS = 10,
     CLAPTRAP_HIT_POINTS = 10,
