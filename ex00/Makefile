@@ -6,7 +6,7 @@
 #    By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/14 22:43:06 by dande-je          #+#    #+#              #
-#    Updated: 2025/03/15 01:35:40 by dande-je         ###   ########.fr        #
+#    Updated: 2025/03/20 08:56:19 by dande-je         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,9 +50,10 @@ NAME_OUTPUT                     = claptrap
 NAME                            = $(BIN_DIR)$(NAME_OUTPUT)
 
 SRCS_FILES                      += $(addprefix $(SRCS_MAIN_DIR), main.cpp)
-SRCS_FILES                      += $(addprefix $(SRCS_CORE_DIR), ClapTrapConstructor.cpp \
+SRCS_FILES                      += $(addprefix $(SRCS_CORE_DIR), ClapTrap.cpp \
 								   ClapTrapUtility.cpp)
-SRCS_FILES                      += $(addprefix $(SRCS_UTILS_DIR), TerminalColor.cpp)
+SRCS_FILES                      += $(addprefix $(SRCS_UTILS_DIR), TerminalColor.cpp \
+								   TerminalColorUtility.cpp)
 
 OBJS                            += $(SRCS_FILES:%.cpp=$(BUILD_DIR)%.o)
 
