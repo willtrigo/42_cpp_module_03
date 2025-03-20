@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/15 02:46:12 by dande-je          #+#    #+#             */
-/*   Updated: 2025/03/15 02:50:50 by dande-je         ###   ########.fr       */
+/*   Updated: 2025/03/20 08:59:51 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,7 @@
 #include <string>
 #include <utility>
 
-TerminalColor::TerminalColor() {}
-TerminalColor::~TerminalColor() {}
-
-TerminalColor& TerminalColor::getInstance() {
-  static TerminalColor instance;
-  return instance;
-}
-
-TerminalColor::TerminalColor(const TerminalColor&) {
-  throw std::runtime_error("Copying of TerminalColor is not allowed");
-}
-
-TerminalColor& TerminalColor::operator=(const TerminalColor&) {
-  throw std::runtime_error("Copy assignment of TerminalColor is not allowed");
-  return *this;
-}
-
-const std::pair<ColorCode, std::string> TerminalColor::COLOR_MAP[] = {
+const std::pair<StrColor, std::string> TerminalColor::STR_COLOR_MAP[] = {
   std::make_pair(BLACK, "\033[30m"),
   std::make_pair(RED, "\033[31m"),
   std::make_pair(GREEN, "\033[32m"),
@@ -43,6 +26,9 @@ const std::pair<ColorCode, std::string> TerminalColor::COLOR_MAP[] = {
   std::make_pair(WHITE, "\033[37m"),
   std::make_pair(ORANGE, "\x1B[38;5;202m"),
   std::make_pair(RESET, "\033[0m"),
+};
+
+const std::pair<BgColor, std::string> TerminalColor::BG_COLOR_MAP[] = {
   std::make_pair(BG_BLACK, "\033[40m"),
   std::make_pair(BG_RED, "\033[41m"),
   std::make_pair(BG_GREEN, "\033[42m"),
@@ -52,9 +38,29 @@ const std::pair<ColorCode, std::string> TerminalColor::COLOR_MAP[] = {
   std::make_pair(BG_CYAN, "\033[46m"),
   std::make_pair(BG_WHITE, "\033[47m"),
   std::make_pair(BG_ORANGE, "\x1B[48;5;202m"),
-  std::make_pair(BG_RESET, "\033[49m")
+  std::make_pair(BG_RESET, "\033[49m"),
 };
 
-std::string TerminalColor::setColor(ColorCode bg, ColorCode color, const std::string& str) const {
-  return COLOR_MAP[bg].second + COLOR_MAP[color].second + str + COLOR_MAP[RESET].second;
+const std::pair<Style, std::string> TerminalColor::STYLE_MAP[] = {
+  std::make_pair(BOLD, "\033[1m"),
+  std::make_pair(ITALIC, "\033[3m"),
+  std::make_pair(UNDERLINE, "\033[4m"),
+};
+
+TerminalColor::TerminalColor() {}
+
+TerminalColor& TerminalColor::getInstance() {
+  static TerminalColor instance;
+  return instance;
+}
+
+TerminalColor::TerminalColor(const TerminalColor&) {
+  throw std::runtime_error("Copying of TerminalColor is not allowed");
+}
+
+TerminalColor::~TerminalColor() {}
+
+TerminalColor& TerminalColor::operator=(const TerminalColor&) {
+  throw std::runtime_error("Copy assignment of TerminalColor is not allowed");
+  return *this;
 }

@@ -6,7 +6,7 @@
 #    By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/15 02:44:09 by dande-je          #+#    #+#              #
-#    Updated: 2025/03/15 04:15:03 by dande-je         ###   ########.fr        #
+#    Updated: 2025/03/20 09:01:18 by dande-je         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,11 +52,12 @@ NAME_OUTPUT                     = scavtrap
 NAME                            = $(BIN_DIR)$(NAME_OUTPUT)
 
 SRCS_FILES                      += $(addprefix $(SRCS_MAIN_DIR), main.cpp)
-SRCS_FILES                      += $(addprefix $(SRCS_CLAPTRAP_DIR), ClapTrapConstructor.cpp \
+SRCS_FILES                      += $(addprefix $(SRCS_CLAPTRAP_DIR), ClapTrap.cpp \
 								   ClapTrapUtility.cpp)
-SRCS_FILES                      += $(addprefix $(SRCS_SCAVTRAP_DIR), ScavTrapConstructor.cpp \
+SRCS_FILES                      += $(addprefix $(SRCS_SCAVTRAP_DIR), ScavTrap.cpp \
 								   ScavTrapUtility.cpp)
-SRCS_FILES                      += $(addprefix $(SRCS_UTILS_DIR), TerminalColor.cpp)
+SRCS_FILES                      += $(addprefix $(SRCS_UTILS_DIR), TerminalColor.cpp \
+								   TerminalColorUtility.cpp)
 
 OBJS                            += $(SRCS_FILES:%.cpp=$(BUILD_DIR)%.o)
 

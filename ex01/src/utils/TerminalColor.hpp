@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/15 02:46:22 by dande-je          #+#    #+#             */
-/*   Updated: 2025/03/15 02:51:27 by dande-je         ###   ########.fr       */
+/*   Updated: 2025/03/20 08:59:33 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <string>
 #include <utility>
 
-enum ColorCode {
+enum StrColor {
   BLACK,
   RED,
   GREEN,
@@ -26,7 +26,10 @@ enum ColorCode {
   CYAN,
   WHITE,
   ORANGE,
-  RESET,
+  RESET
+};
+
+enum BgColor {
   BG_BLACK,
   BG_RED,
   BG_GREEN,
@@ -36,8 +39,13 @@ enum ColorCode {
   BG_CYAN,
   BG_WHITE,
   BG_ORANGE,
-  BG_RESET,
-  TOTAL_COLOR
+  BG_RESET
+};
+
+enum Style {
+  BOLD,
+  ITALIC,
+  UNDERLINE
 };
 
 class TerminalColor {
@@ -46,14 +54,22 @@ class TerminalColor {
 
   static TerminalColor& getInstance();
 
-  std::string setColor(ColorCode bg, ColorCode color, const std::string& str) const;
+  std::string setColor(StrColor strColor, const std::string& str) const;
+  std::string setColor(BgColor bgColor, const std::string& str) const;
+  std::string setColor(Style style, const std::string& str) const;
+  std::string setColor(BgColor bgColor, StrColor strColor, const std::string& str) const;
+  std::string setColor(BgColor bgColor, Style style, const std::string& str) const;
+  std::string setColor(StrColor strColor, Style style, const std::string& str) const;
+  std::string setColor(BgColor bgColor, StrColor strColor, Style style, const std::string& str) const;
 
  private:
   TerminalColor();
   TerminalColor(const TerminalColor&);
   TerminalColor& operator=(const TerminalColor&);
 
-  static const std::pair<ColorCode, std::string> COLOR_MAP[];
+  static const std::pair<StrColor, std::string> STR_COLOR_MAP[];
+  static const std::pair<BgColor, std::string> BG_COLOR_MAP[];
+  static const std::pair<Style, std::string> STYLE_MAP[];
 };
 
 #endif // TERMINAL_COLOR_HPP
