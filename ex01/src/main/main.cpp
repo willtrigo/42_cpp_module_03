@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/15 02:44:36 by dande-je          #+#    #+#             */
-/*   Updated: 2025/03/15 16:12:29 by dande-je         ###   ########.fr       */
+/*   Updated: 2025/03/20 10:53:02 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,20 @@ int main() {
     bestPractice.guardGate();
     bestPractice.beRepaired(1);
     bestPractice.attack("you");
+  }
+  std::cout << std::endl << "---------------------------------------------------" << std::endl << std::endl;
+  {
+    ClapTrap* clap = new ClapTrap("42");
+    ScavTrap* scav = new ScavTrap("bocal");
+    ClapTrap* scav2 = new ScavTrap("staff");
+
+    clap->attack("you");
+    scav->attack("you");
+    scav2->attack("you");
+
+    delete clap;
+    delete scav;
+    delete scav2;
   }
   return EXIT_SUCCESS;
 }

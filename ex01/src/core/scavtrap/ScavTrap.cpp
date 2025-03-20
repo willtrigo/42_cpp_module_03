@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrapConstructor.cpp                            :+:      :+:    :+:   */
+/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/15 03:05:20 by dande-je          #+#    #+#             */
-/*   Updated: 2025/03/15 15:55:36 by dande-je         ###   ########.fr       */
+/*   Updated: 2025/03/20 11:07:49 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ ScavTrap::ScavTrap() : ClapTrap() {
   log("Default scavtrap constructor called");
 }
 
-ScavTrap::ScavTrap(const std::string name) : ClapTrap(name) {
+ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name) {
   this->m_nameClass = "ScavTrap";
   this->m_attackDamage = SCAVTRAP_ATTACK_DAMAGE;
   this->m_energyPoints = SCAVTRAP_ENERGY_POINTS;

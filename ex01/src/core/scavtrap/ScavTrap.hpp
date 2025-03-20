@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/15 03:17:20 by dande-je          #+#    #+#             */
-/*   Updated: 2025/03/15 03:17:22 by dande-je         ###   ########.fr       */
+/*   Updated: 2025/03/20 11:08:37 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@
 class ScavTrap : public ClapTrap {
  public:
   ScavTrap();
-  ScavTrap(const std::string name);
+  ScavTrap(const std::string& name);
   ScavTrap(ScavTrap const& other);
-  ~ScavTrap();
+  virtual ~ScavTrap();
 
   ScavTrap& operator=(const ScavTrap& other);
 
