@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 15:21:52 by dande-je          #+#    #+#             */
-/*   Updated: 2025/03/20 16:52:06 by dande-je         ###   ########.fr       */
+/*   Updated: 2025/03/21 20:39:08 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ DiamondTrap::DiamondTrap(const std::string& name)
   log("Default diamondtrap parameterized constructor called");
 }
 
-DiamondTrap::DiamondTrap(DiamondTrap const& other)
+DiamondTrap::DiamondTrap(const DiamondTrap& other)
   : ClapTrap(other),
     FragTrap(other),
     ScavTrap(other) {

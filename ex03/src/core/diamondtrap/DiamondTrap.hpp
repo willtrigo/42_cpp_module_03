@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 15:22:15 by dande-je          #+#    #+#             */
-/*   Updated: 2025/03/20 16:50:29 by dande-je         ###   ########.fr       */
+/*   Updated: 2025/03/21 20:38:59 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class DiamondTrap : public FragTrap, public ScavTrap {
  public:
   DiamondTrap();
   DiamondTrap(const std::string& name);
-  DiamondTrap(DiamondTrap const& other);
+  DiamondTrap(const DiamondTrap& other);
   virtual ~DiamondTrap();
 
   DiamondTrap& operator=(const DiamondTrap& other);

@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 09:36:29 by dande-je          #+#    #+#             */
-/*   Updated: 2025/03/20 11:21:18 by dande-je         ###   ########.fr       */
+/*   Updated: 2025/03/21 20:37:19 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class FragTrap : public ClapTrap {
  public:
   FragTrap();
   FragTrap(const std::string& name);
-  FragTrap(FragTrap const& other);
+  FragTrap(const FragTrap& other);
   virtual ~FragTrap();
 
   FragTrap& operator=(const FragTrap& other);

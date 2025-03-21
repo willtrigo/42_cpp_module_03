@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 09:32:16 by dande-je          #+#    #+#             */
-/*   Updated: 2025/03/20 11:14:37 by dande-je         ###   ########.fr       */
+/*   Updated: 2025/03/21 20:37:50 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name) {
   log("Default scavtrap parameterized constructor called");
 }
 
-ScavTrap::ScavTrap(ScavTrap const& other) : ClapTrap(other) {
+ScavTrap::ScavTrap(const ScavTrap& other) : ClapTrap(other) {
   this->m_nameClass = "ScavTrap";
   this->m_attackDamage = SCAVTRAP_ATTACK_DAMAGE;
   this->m_energyPoints = SCAVTRAP_ENERGY_POINTS;

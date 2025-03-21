@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 14:41:07 by dande-je          #+#    #+#             */
-/*   Updated: 2025/03/20 14:41:40 by dande-je         ###   ########.fr       */
+/*   Updated: 2025/03/21 20:38:37 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class ClapTrap {
  public:
   ClapTrap();
   ClapTrap(const std::string& name);
-  ClapTrap(ClapTrap const& other);
+  ClapTrap(const ClapTrap& other);
   virtual ~ClapTrap();
 
   ClapTrap& operator=(const ClapTrap& other);

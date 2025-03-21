@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 09:36:20 by dande-je          #+#    #+#             */
-/*   Updated: 2025/03/20 17:02:01 by dande-je         ###   ########.fr       */
+/*   Updated: 2025/03/21 20:37:29 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ FragTrap::FragTrap(const std::string& name) : ClapTrap(name) {
   log("Default fragtrap parameterized constructor called");
 }
 
-FragTrap::FragTrap(FragTrap const& other) : ClapTrap(other) {
+FragTrap::FragTrap(const FragTrap& other) : ClapTrap(other) {
   this->m_nameClass = "FragTrap";
   this->m_attackDamage = FRAGTRAP_ATTACK_DAMAGE;
   this->m_energyPoints = FRAGTRAP_ENERGY_POINTS;

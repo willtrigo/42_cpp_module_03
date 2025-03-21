@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 22:49:51 by dande-je          #+#    #+#             */
-/*   Updated: 2025/03/20 11:02:53 by dande-je         ###   ########.fr       */
+/*   Updated: 2025/03/21 20:33:40 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ ClapTrap::ClapTrap(const std::string& name)
   log("Default claptrap parameterized constructor called");
 }
 
-ClapTrap::ClapTrap(ClapTrap const& other)
+ClapTrap::ClapTrap(const ClapTrap& other)
   : m_name(other.m_name),
     m_attackDamage(other.m_attackDamage),
     m_energyPoints(other.m_energyPoints),
