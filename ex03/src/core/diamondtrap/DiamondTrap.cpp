@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 15:21:52 by dande-je          #+#    #+#             */
-/*   Updated: 2025/03/21 20:39:08 by dande-je         ###   ########.fr       */
+/*   Updated: 2025/03/23 15:18:26 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ DiamondTrap::DiamondTrap()
   this->m_attackDamage = FRAGTRAP_ATTACK_DAMAGE;
   this->m_energyPoints = SCAVTRAP_ENERGY_POINTS;
   this->m_hitPoints = FRAGTRAP_HIT_POINTS;
-  this->m_bgColor = BG_GREEN;
-  this->m_strColor = RED;
+  this->m_bgColor = BG_BLUE;
+  this->m_strColor = YELLOW;
   log("Default diamondtrap constructor called");
 }
 
@@ -39,8 +39,8 @@ DiamondTrap::DiamondTrap(const std::string& name)
   this->m_attackDamage = FRAGTRAP_ATTACK_DAMAGE;
   this->m_energyPoints = FRAGTRAP_ENERGY_POINTS;
   this->m_hitPoints = FRAGTRAP_HIT_POINTS;
-  this->m_bgColor = BG_GREEN;
-  this->m_strColor = RED;
+  this->m_bgColor = BG_BLUE;
+  this->m_strColor = YELLOW;
   log("Default diamondtrap parameterized constructor called");
 }
 
@@ -53,22 +53,22 @@ DiamondTrap::DiamondTrap(const DiamondTrap& other)
   this->m_attackDamage = FRAGTRAP_ATTACK_DAMAGE;
   this->m_energyPoints = FRAGTRAP_ENERGY_POINTS;
   this->m_hitPoints = FRAGTRAP_HIT_POINTS;
-  this->m_bgColor = BG_GREEN;
-  this->m_strColor = RED;
+  this->m_bgColor = BG_BLUE;
+  this->m_strColor = YELLOW;
   log("Copy diamondtrap constructor called");
 }
 
 DiamondTrap::~DiamondTrap() {
   this->m_nameClass = "DiamondTrap";
-  this->m_bgColor = BG_GREEN;
-  this->m_strColor = RED;
+  this->m_bgColor = BG_BLUE;
+  this->m_strColor = YELLOW;
   log("Destructor diamondtrap called");
 }
 
 DiamondTrap& DiamondTrap::operator=(const DiamondTrap& other) {
   if (this != &other) {
-    this->m_bgColor = BG_GREEN;
-    this->m_strColor = RED;
+    this->m_bgColor = BG_BLUE;
+    this->m_strColor = YELLOW;
     log("Copy assignment " + other.m_nameClass + " operator called");
     this->m_name = other.m_name;
     this->m_nameClass = other.m_nameClass;
